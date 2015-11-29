@@ -2,12 +2,19 @@ extends layout
 
 block content
   p Welcome to #{title}
-  p #{kaomoji}
-  p 2 records retrieved
+  p #{numberOfRecords} records retrieved
+
+  section.post.foodies
+    p
+      a(href="#") Foodies
 
   section.post.paradise
-    a(href="#") Paradise
+    p
+      a(href="#") Paradise
 
   section.post.babel
-    a(href="#") Lucidity
+    p
+      a(href="#") Lucidity
 
+  footer
+    p #{kaomoji}
