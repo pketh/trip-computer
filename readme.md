@@ -7,6 +7,6 @@ The unlucky in life and love scour the galaxy for Paradise. These are the record
 
 `coffee -wc public/scripts`
 
-## 🔮🏃
+## 🔮🔮🔮
 
 - [ ] add rss
