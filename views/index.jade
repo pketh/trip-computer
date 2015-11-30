@@ -1,20 +1,49 @@
 extends layout
 
 block content
-  p Welcome to #{title}
-  p #{numberOfRecords} records retrieved
+  header
+    h1 Welcome to #{title}
+    p #{numberOfRecords} records retrieved
 
-  section.post.foodies
-    p
-      a(href="#") Foodies
+  main
+    section.record.babel
+      p
+        a(href="#") Lucidity
+      pre
+        |♬　　　　　　♬
+        |━━━━━━━━━━━━━━━━━ ♬
+        |━━━━━━━━━━━━━━━━━━━
+        |━━━━━━━━━━━━━━━━━ ♬
+        |━━━━━━━━━━━━━━━━━━━
+        |　　　　　　♬
+        |━━━━━━━━━━━━━━
 
-  section.post.paradise
-    p
-      a(href="#") Paradise
+    section.record.paradise
+      p
+        a(href="#") Paradise
+      pre
+        |　　　　　◓　◓
+        |　
+        |　◐　　　　　　　　　◑
+        |　　　　　　◓
+        |◐　　　◓　　　◓　　　◑
 
-  section.post.babel
-    p
-      a(href="#") Lucidity
+        |◐　　　◒　　　◒　　　◑
+        |　　　　　　◒
+        |　◐　　　　　　　　　◑
+        |　
+        |　　　　　◒　◒
+
+    section.record.foodies
+      p
+        a(href="#") Foodies
 
   footer
     p #{kaomoji}
+
+  canvas#stars
+  script(src="/scripts/index.js")
+
+
+// https://twitter.com/crashtxt/status/649608227215265792
+// https://twitter.com/crashtxt/status/646025003943751680
