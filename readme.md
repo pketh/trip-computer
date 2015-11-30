@@ -1,7 +1,8 @@
 # Trip Computer
 
-The last human feet left earth in 2235, the last humans left are on the Babel space station. 
-The unlucky in life and love scour the galaxy for Paradise. These are the records from Aquarius 3.
+The last human feet left earth in 2235, the remaining few call the Babel space station home. 
+Slackers in life and love are sent to scour the galaxy for Paradise. 
+These records are from one of those ships.
 
 `nodemon npm start`
 
@@ -11,4 +12,5 @@ The unlucky in life and love scour the galaxy for Paradise. These are the record
 
 - [ ] sounds
 - [ ] add 3 records before telling people about this
+- [ ] add favicon
 - [ ] add rss
