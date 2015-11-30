@@ -1,10 +1,11 @@
-initialStarCount = 20
-starCount = 1
-maxStars = 100
 width = $(document).width()
-console.log width
 height = $(document).height()
-console.log height
+
+stars = 1
+additionalStars = Math.round (width * height) / 6000
+initialStars = Math.round (width * height) / 25000
+console.log "#{initialStars} initial stars"
+console.log "#{additionalStars} additional stars"
 
 canvas = $('#stars')
 context = canvas[0].getContext "2d"
@@ -24,15 +25,14 @@ drawStar = ->
   y = _.random(15, height)
   context.fillRect(x, y, 2, 2)
 
-drawStar() for [1..initialStarCount]
+drawStar() for [1..initialStars]
 
 timedStars = ->
-  if starCount < maxStars
+  if stars < additionalStars
     drawStar()
-    starCount++
+    stars++
 
 setInterval(timedStars, 500)
-console.log starCount
 
 
 # add satelite / j-fog
