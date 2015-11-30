@@ -10,3 +10,4 @@ The unlucky in life and love scour the galaxy for Paradise. These are the record
 ## 🔮🔮🔮
 
 - [ ] add rss
+- [ ] add 3 records before telling people about this
