@@ -19,5 +19,6 @@ router.get '/lucidity', (req, res, next) ->
   res.render 'lucidity',
     title: 'Lucidity'
     recordStyles: "/styles/lucidity.css"
+    recordScript: "/scripts/lucidity.js"
 
 module.exports = router
