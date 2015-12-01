@@ -57,7 +57,14 @@ setInterval(timedStars, 250)
 
 # random draggable eyes
 
-eyes = $('.draggable .eyes')
-eyes.css
+# eyes = $('.draggable .eyes')
+# eyes.css
+#   'left': _.random 30, width
+#   'top': _.random 30, height
+
+cat = $('.draggable .cat')
+cat.css
   'left': _.random 30, width
   'top': _.random 30, height
+
+cat.draggabilly()
