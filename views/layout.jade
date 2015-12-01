@@ -3,8 +3,12 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/index.css')
+    if recordStyles
+      link(rel='stylesheet', href=recordStyles)
     script(src="http://code.jquery.com/jquery-2.1.4.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js")
     script(src="//cdnjs.cloudflare.com/ajax/libs/draggabilly/1.2.0/draggabilly.pkgd.min.js")
   body
     block content
+  if recordScript
+    script(src=recordScript)

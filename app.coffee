@@ -6,7 +6,7 @@ bodyParser = require 'body-parser'
 stylus = require 'stylus'
 autoprefixer = require 'autoprefixer-stylus'
 
-routes = require './routes/index'
+routes = require './routes/routes'
 
 app = express()
 
