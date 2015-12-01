@@ -30,8 +30,8 @@ drawStar = (color) ->
   #   context.fillStyle = color
   # else
   context.fillStyle = color
-  x = _.random(15, width)
-  y = _.random(15, height)
+  x = _.random 15, width
+  y = _.random 15, height
   # push this to a drawn starCoordinates object array [{x:1, y:2}, {..}, {,,}]
   context.fillRect(x, y, 2, 2)
 
@@ -53,4 +53,11 @@ timedStars = ->
 
 setInterval(timedStars, 250)
 
+####
 
+# random draggable eyes
+
+eyes = $('.draggable .eyes')
+eyes.css
+  'left': _.random 30, width
+  'top': _.random 30, height

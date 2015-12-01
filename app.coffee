@@ -3,6 +3,8 @@ path = require 'path'
 logger = require 'morgan'
 cookieParser = require 'cookie-parser'
 bodyParser = require 'body-parser'
+stylus = require 'stylus'
+autoprefixer = require 'autoprefixer-stylus'
 
 routes = require './routes/index'
 
@@ -17,7 +19,11 @@ app.use bodyParser.json()
 app.use bodyParser.urlencoded
   extended: false
 app.use cookieParser()
-app.use require('stylus').middleware path.join __dirname, 'public'
+app.use stylus.middleware
+    compile: (str, path) ->
+        stylus(str)
+            .use autoprefixer()
+    src: path.join __dirname, 'public'
 app.use express.static path.join __dirname, 'public'
 
 app.use '/', routes
