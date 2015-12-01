@@ -19,11 +19,17 @@ app.use bodyParser.json()
 app.use bodyParser.urlencoded
   extended: false
 app.use cookieParser()
+
 app.use stylus.middleware
-    compile: (str, path) ->
-        stylus(str)
-            .use autoprefixer()
     src: path.join __dirname, 'public'
+    compile: (str, path) ->
+        console.log 'compiling ', path
+        return stylus(str)
+            .use autoprefixer()
+            .set 'filename', path
+            .set 'warn', true
+            .set 'compress', true
+
 app.use express.static path.join __dirname, 'public'
 
 app.use '/', routes

@@ -30,7 +30,7 @@ setInterval(timedStars, 250)
 
 cat = $('.draggable .cat')
 cat.css
-  'left': _.random 30, width - 45
-  'top': _.random 30, height - 25
+  'left': _.random 30, width - 85
+  'top': _.random 30, height - 45
 
 cat.draggabilly()
