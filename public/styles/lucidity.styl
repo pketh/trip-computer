@@ -5,7 +5,9 @@ main
   overflow: hidden
 
 h1
+  display: inline-block
   text-transform: uppercase
+  background-color: black
   a
     color: white
     text-decoration: none
@@ -27,8 +29,19 @@ p
 .thalia
   background-color: black
   color: white
-  margin-left: 5px
-  margin-right: 5px
+  padding-left: 5px
+  padding-right: 5px
+
+.show
+  border: 1px solid white
+  cursor: pointer
+  &:hover
+    background-color: white
+    color: black
+
+.reveal
+  display: none
+
 
 .attribution
   background-color: white
@@ -46,25 +59,28 @@ footer
     font-size: 20px
     padding: 5px 10px
 
-ring-left = -80%
+ring-left = -75%
+
+canvas
+  user-select: none
 
 canvas#outer-ring
   position: absolute
-  z-index: -1
+  z-index: -2
   left: ring-left
   top: -51%
   animation: rotation 30s linear infinite
 
-canvas#inner-ring
+canvas#middle-ring
   position: absolute
-  z-index: -1
+  z-index: -2
   left: ring-left
   top: -51%
   animation: rotation 25s linear infinite
 
-canvas#center
+canvas#inner-ring
   position: absolute
-  z-index: -1
+  z-index: -2
   left: ring-left
   top: -51%
   animation: rotation 20s linear infinite
