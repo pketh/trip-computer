@@ -2,6 +2,12 @@ $('.show').click ->
   $('.reveal').css('display': 'inline-block')
   $('.thalia').removeClass('show')
 
+$('main p').not('.thalia').click ->
+  console.log 'clicked'
+  $('.thomas').css('background-color': randomColor({'luminosity': 'light'}))
+  $('.kai').css('background-color': randomColor({'luminosity': 'light'}))
+
+
 circlePoints = []
 context = null
 
@@ -22,7 +28,6 @@ createCirclePoints = (options) ->
     angle = slice * i
     x = options.center.x + options.radius * Math.cos(angle)
     y = options.center.y + options.radius * Math.sin(angle)
-    console.log options.jitterMultiplier
     point =
       x: jitterPoints x, options.jitterMultiplier
       y: jitterPoints y, options.jitterMultiplier
