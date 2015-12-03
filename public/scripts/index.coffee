@@ -26,7 +26,7 @@ timedStars = ->
     drawStar('yellow')
     stars++
 
-setInterval(timedStars, 250)
+setInterval(timedStars, 200)
 
 cat = $('.draggable .cat')
 cat.css

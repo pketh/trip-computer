@@ -1,8 +1,14 @@
-kai = #fbaf5c
-thomas = #9ee1fb
+kai = violet
+thomas = lightseagreen
+
+main
+  overflow: hidden
 
 h1
   text-transform: uppercase
+  a
+    color: white
+    text-decoration: none
 
 p
   max-width: 400px
@@ -19,7 +25,7 @@ p
   background-color: thomas
 
 .thalia
-  background-color: transparent
+  background-color: black
   color: white
   margin-left: 5px
   margin-right: 5px
@@ -40,6 +46,31 @@ footer
     font-size: 20px
     padding: 5px 10px
 
-// border: 1px solid white
-// padding: 0px 4px
-// border-radius: 2px
+ring-left = -80%
+
+canvas#outer-ring
+  position: absolute
+  z-index: -1
+  left: ring-left
+  top: -51%
+  animation: rotation 30s linear infinite
+
+canvas#inner-ring
+  position: absolute
+  z-index: -1
+  left: ring-left
+  top: -51%
+  animation: rotation 25s linear infinite
+
+canvas#center
+  position: absolute
+  z-index: -1
+  left: ring-left
+  top: -51%
+  animation: rotation 20s linear infinite
+
+@keyframes rotation
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(360deg)

@@ -2,7 +2,9 @@ extends layout
 
 block content
   header
-    h1 #{title}
+    h1
+      a(href="/")
+        span #{title}
 
   main
     p.kai What'd you want to be when you grew up?
@@ -24,8 +26,11 @@ block content
       p.attribution words,
         a(href="http://mindoflogic.com") Logic
 
-  footer
-    p
-      a.next-record(href="#") ↓
+  if nextRecord
+    footer
+      p
+        a.next-record(href=nextRecord) ↓
 
-  canvas#infinite
+  canvas#outer-ring
+  canvas#inner-ring
+  canvas#center
